@@ -1,13 +1,11 @@
 version: '3'
 services:
-  webapp:
-    image: php:7.2-apache
+  chat-client:
+    build: ./chat-client
     ports:
-    - "80:80"
-    volumes:
-    - ./app:/var/www/html      
+    - "80:80"      
   echo-server:
-    build: .
+    build: ./echo-server
     ports:
     - "8889:8889"
-
+    
